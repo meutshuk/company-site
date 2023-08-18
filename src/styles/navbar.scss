@@ -1,0 +1,75 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 9;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  transform: translateY(100%);
+  opacity: 0;
+  font-family: "ADLaM Display", cursive;
+  // font-size: 8vw;
+  font-size: clamp(8vw, 50%, 9vw);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 0 100vw; /* Space equivalent to screen width on each side */
+  transition: color 0.2s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10; /* Ensures the button is always above the navbar overlay */
+}
+
+.overlay.active {
+  transform: translateX(0);
+}
+
+.logo-name {
+  font-family: "ADLaM Display", cursive;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10; /* Ensures the button is always above the navbar overlay */
+}
+
+/** 
+* toggle button
+  */

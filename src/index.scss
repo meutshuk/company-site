@@ -2,58 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
 
-body,html {
-    margin: 0;
-    padding: 0;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    // object-fit: cover;
-    // position: fixed;
-    z-index: -1;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  // object-fit: cover;
+  // position: fixed;
+  z-index: -1;
 }
 
-#canvas{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vw;
-    background: ivory;
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+  background: ivory;
 }
-
 
 // ---- new
-.marquee00{
-   display: flex;
-    align-items: center;
-    cursor: -webkit-grab;
+.marquee00 {
+  display: flex;
+  align-items: center;
+  cursor: -webkit-grab;
 }
 
-
 .item {
-    // font-size: 10vw;
-    letter-spacing: -0.05em;
-    padding-right: 0.25em;
-    white-space: nowrap;
-    -webkit-user-select: none;
-    user-select: none;
-    /* will-change: transform; */
-  }
-  
-  .drag {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-  }
-  
-  .bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
+  // font-size: 10vw;
+  letter-spacing: -0.05em;
+  padding-right: 0.25em;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  /* will-change: transform; */
+}
+
+.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+// ---

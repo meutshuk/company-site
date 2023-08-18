@@ -32,7 +32,7 @@ export const Navbar = () => {
       <div className="nav">
         <div className="nav__content">
           <ul className="nav__list menu  ">
-            <div class="menu__item nav__list-item">
+            <div>
               <a class="menu__item-link">Home</a>
               <div class="marquee">
                 <div class="marquee__inner" aria-hidden="true">

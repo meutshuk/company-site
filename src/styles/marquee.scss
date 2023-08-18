@@ -1,0 +1,139 @@
+/* item styles */
+.item {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .item__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 10s linear infinite;
+
+    font-size: xx-large;
+    
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  /* Pause animation when reduced-motion is set */
+  @media (prefers-reduced-motion: reduce) {
+    .item__content {
+      animation-play-state: paused !important;
+    }
+  }
+
+  .item:hover {
+    animation-play-state: paused
+  }
+  
+  /* Enable animation */
+  .enable-animation .item__content {
+    animation: scroll 10s linear infinite;
+  }
+  
+  /* Reverse animation */
+  .item--reverse .item__content {
+    animation-direction: reverse;
+  }
+  
+  /* Pause on hover */
+  .item--hover-pause:hover .item__content {
+    animation-play-state: paused;
+  }
+  
+  
+  
+
+  
+  /* Enable position absolute animation on the duplicate content (last-child) */
+  .enable-animation .item--pos-absolute .item__content:last-child {
+    animation-name: scroll-abs;
+  }
+  
+ 
+
+  
+  // =========================
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+.marques2 {
+  font-size: clamp(4rem, 4.5vw, 9rem);
+  font-weight: 800;
+  line-height: 1.25;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+.marquee__text {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.marquee__line {
+  display: flex;
+  position: relative;
+
+  &:nth-child(2) {
+    justify-content: flex-end;
+    z-index: 1;
+  }
+}
+
+.marquee__sentence {
+  padding-right: 30px;
+  white-space: nowrap;
+}
+
+.marquee__image {
+  height: 120%;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: -10%;
+}
+
+
+// ----------------
+
+.marquee-framer {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 206px;
+  overflow: hidden;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.track > h1 {
+  margin: 20px 0;
+  font-size: 8rem;
+  font-family: Antonio;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #f4955c;
+  text-transform: uppercase;
+}
