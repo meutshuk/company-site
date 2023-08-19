@@ -77,6 +77,8 @@ const VideoCard = ({ thumbnail, video, description }) => {
           width="auto"
           height="auto"
           preload="none"
+          autoPlay
+          playsInline
           loop
           muted
           poster={thumbnail}
