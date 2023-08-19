@@ -15,7 +15,14 @@ export default function Video({ isDay }) {
 
   return (
     <section className="video-section ">
-      <video ref={videoRef} key={isDay ? "day" : "night"} autoPlay muted loop>
+      <video
+        ref={videoRef}
+        key={isDay ? "day" : "night"}
+        playsInline
+        autoPlay
+        muted
+        loop
+      >
         <source
           src={
             isDay
