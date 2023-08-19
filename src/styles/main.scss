@@ -5,3 +5,45 @@
 @import "video-background.scss";
 @import "marquee";
 @import "footer";
+
+// Styles for light theme
+[data-theme="light"] {
+  --background: #{$light-background};
+  --color: #{$light-text};
+  --red: #{$red};
+  --ascent: #{$light-ascent};
+  --header: #{$light-header};
+
+  --primary: #{$primary};
+}
+
+// Styles for dark theme
+[data-theme="dark"] {
+  //use color function to get the color value
+  // --background: #{color("dark-background")};
+
+  --background: #{$dark-background};
+  --color: #{$dark-text};
+  --red: #{$red};
+  --ascent: #{$dark-ascent};
+  --header: #{$dark-header};
+
+  --primary: #{$primary};
+  // --background: #{};
+}
+
+html {
+  background: var(--background);
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Modern sans-serif font */
+  font-size: 2rem; /* Relative size for better scalability across devices */
+  font-weight: 600; /* Bold for prominence */
+  color: var(--header); /* Almost black for high contrast */
+  margin-bottom: 1rem; /* Space below the heading */
+  letter-spacing: -1px; /* Slightly tighter letter spacing for better appearance */
+  text-transform: capitalize; /* First letter of each word is capitalized */
+  line-height: 1.2; /* Good line-height for readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow for depth */
+}

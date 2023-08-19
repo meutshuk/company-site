@@ -3,4 +3,53 @@ $footer-background: #000000;
 $footer-icon-color: #ffffff;
 
 $primary: #002856;
-$secondary: #f7a500;
+$secondary: #5e769d;
+
+$red: #ef476f;
+$yellow: #ffd166;
+$green: #06d6a0;
+$pink: #ffafcc;
+$lavender: #b8b8ff;
+
+$ascent: #fe016c;
+
+// ----- IMP ====
+$dark-background: #16161a;
+$dark-ascent: #232429;
+$dark-text: #cdd6e1;
+$dark-header: #ffffff;
+
+$dark-grey: #393838;
+$text-color-dark: #cecbcb;
+
+$light-background: #fff;
+$light-ascent: #e9e7e7;
+$light-text: #000000;
+$light-header: #3b3b3b;
+
+$light-grey: #f5f5f5;
+$text-color-light: #000000;
+
+// // create a list of color variable
+// $colors: (
+//   "primary": $primary,
+//   "secondary": $secondary,
+//   "red": $red,
+//   "dark-background": $dark-background,
+//   "dark-ascent": $dark-ascent,
+//   "dark-primary": $dark-primary,
+//   "light-background": $light-background,
+//   "light-ascent": $light-ascent,
+//   "light-primary": $light-primary,
+//   "bg-color-light": $bg-color-light,
+//   "text-color-light": $text-color-light,
+//   "primary-color-light": $primary-color-light,
+//   "bg-color-dark": $bg-color-dark,
+//   "text-color-dark": $text-color-dark,
+//   "primary-color-dark": $primary-color-dark,
+// );
+
+// // create a function to get the color value
+// @function color($color-name) {
+//   @return map-get($colors, $color-name);
+// }

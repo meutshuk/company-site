@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Video({ isDay }) {
+export default function Video({ darkMode }) {
+  console.log(darkMode);
   const officeRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -11,7 +12,7 @@ export default function Video({ isDay }) {
       videoRef.current.load(); // Load and reset the new video source
       videoRef.current.play(); // Play the video
     }
-  }, [isDay]);
+  }, [darkMode]);
 
   return (
     <section className="video-section ">
@@ -27,7 +28,7 @@ export default function Video({ isDay }) {
           position: "absolute",
           top: 0,
           left: 0,
-          visibility: isDay ? "visible" : "hidden",
+          visibility: !darkMode ? "visible" : "hidden",
         }}
       >
         <source src="./videos/background/day.mp4" type="video/mp4" />
@@ -45,20 +46,13 @@ export default function Video({ isDay }) {
           position: "absolute",
           top: 0,
           left: 0,
-          visibility: !isDay ? "visible" : "hidden",
+          visibility: darkMode ? "visible" : "hidden",
         }}
       >
         <source src="./videos/background/night.mp4" type="video/mp4" />
       </video>
 
-      <div
-        className={
-          isDay
-            ? "logo-text-overlay logo color-black"
-            : "logo-text-overlay logo color-white"
-        }
-        ref={officeRef}
-      >
+      <div className={"logo-text-overlay logo bg-color"} ref={officeRef}>
         MINES REACUE VR
       </div>
     </section>

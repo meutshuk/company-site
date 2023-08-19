@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-export default function Nav({ isDay, toggleDayNight }) {
+export default function Nav({ darkMode, toggleDayNight }) {
   const navbarOverlayRef = useRef(null);
   const navLinkRefs = useRef([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -73,17 +73,15 @@ export default function Nav({ isDay, toggleDayNight }) {
         {/* <a className="logo-name text-blue-400">Mines Rescue VR</a> */}
         <button className="navbar-toggle " onClick={toggleNavbar}>
           {isOpen ? (
-            <div className="bg-blue-400 rounded-full ">
+            <div className="bg-red hover:opacity-90 text-white rounded-full ">
               <IoClose />
             </div>
           ) : (
             <div>
-              <IoMenu className="bg-blue-400 rounded-full p-2" />
+              <IoMenu className="bg-red hover:opacity-90 text-white rounded-full p-2" />
             </div>
           )}
         </button>
-
-        <Toggle isDay={isDay} toggleDayNight={toggleDayNight} />
 
         <div
           ref={navbarOverlayRef}
@@ -103,26 +101,3 @@ export default function Nav({ isDay, toggleDayNight }) {
     </>
   );
 }
-
-const Toggle = ({ isDay, toggleDayNight }) => {
-  return (
-    <label
-      htmlFor="AcceptConditions"
-      className="absolute right-24 top-7 z-20 h-8 w-12 cursor-pointer"
-    >
-      <input
-        onClick={toggleDayNight}
-        type="checkbox"
-        id="AcceptConditions"
-        className="peer sr-only"
-        checked={!isDay}
-      />
-
-      <span className="absolute inset-0 m-auto h-2 rounded-full bg-red-500"></span>
-
-      <span className="absolute inset-y-0 start-0 m-auto h-6 w-6 rounded-full bg-gray-500 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
-        <span className="absolute inset-0 m-auto h-4 w-4 rounded-full bg-yellow-500 transition"></span>
-      </span>
-    </label>
-  );
-};

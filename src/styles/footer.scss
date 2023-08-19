@@ -1,6 +1,6 @@
 .footer-container {
   width: 100%;
-  background-color: $footer-background;
+  background-color: var(--ascent);
   padding: 40px 0;
   color: #cfcfcf;
 }
@@ -38,17 +38,17 @@
 .icon {
   margin-right: 10px;
   font-size: 20px;
-  color: $footer-icon-color;
+  color: var(--red);
 }
 
 .footer-section a {
-  color: #cfcfcf;
+  color: var(--red);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .footer-section a:hover {
-  color: #f7a500;
+  opacity: 0.8;
 }
 
 .footer-bottom {

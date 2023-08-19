@@ -4,49 +4,24 @@ const videos = [
   {
     thumbnail: "videos/1/1.png",
     video: "./videos/1/1.mp4",
-    desctiprion: "World animation",
+    description: "World animation",
   },
   {
     thumbnail: "./videos/1/1.png",
     video: "./videos/1/1.mp4",
-    desctiprion: "World animaion",
+    description: "World animaion",
+  },
+  {
+    thumbnail: "./videos/1/1.png",
+    video: "./videos/1/1.mp4",
+    description: "World animaion",
+  },
+  {
+    thumbnail: "./videos/1/1.png",
+    video: "./videos/1/1.mp4",
+    description: "World animaion",
   },
 ];
-
-// const VideoCard = ({ thumbnail, video }) => {
-//   console.log(thumbnail, video);
-//   let videoRef = React.useRef(null);
-
-//   const handleMouseEnter = () => {
-//     if (videoRef.current) videoRef.current.play();
-//   };
-
-//   const handleMouseLeave = () => {
-//     if (videoRef.current) videoRef.current.pause();
-//   };
-
-//   return (
-//     <div
-//       className="w-1/2 p-4"
-//       onMouseEnter={handleMouseEnter}
-//       onMouseLeave={handleMouseLeave}
-//     >
-//       <div className="bg-gray-900 h-64 overflow-hidden relative">
-//         <video
-//           ref={videoRef}
-//           className="absolute top-0 left-0 w-full h-full object-cover"
-//           preload="none"
-//           loop
-//           muted
-//           poster={thumbnail}
-//         >
-//           <source src={video} type="video/mp4" />
-//           Your browser does not support the video tag.
-//         </video>
-//       </div>
-//     </div>
-//   );
-// };
 
 const VideoCard = ({ thumbnail, video, description }) => {
   let videoRef = React.useRef(null);
@@ -65,28 +40,32 @@ const VideoCard = ({ thumbnail, video, description }) => {
   };
 
   return (
-    <div
-      className="w-80 h-96 "
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="bg-gray-900 h-full object-fill  overflow-hidden relative rounded-3xl">
-        <video
-          className="object-cover w-full h-full"
-          ref={videoRef}
-          width="auto"
-          height="auto"
-          preload="none"
-          autoPlay
-          playsInline
-          loop
-          muted
-          poster={thumbnail}
-        >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <div className="flex flex-col justify-center items-center gap-2">
+      <div
+        className="  w-80 h-96 "
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="bg-gray-900 h-full object-fill broder-white border-2 overflow-hidden relative rounded-3xl">
+          <video
+            className="object-cover w-full h-full"
+            ref={videoRef}
+            width="auto"
+            height="auto"
+            preload="none"
+            autoPlay
+            playsInline
+            loop
+            muted
+            poster={thumbnail}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
+
+      <span className="text-color font-light text-lg">{description}</span>
     </div>
   );
 };
@@ -94,9 +73,9 @@ const VideoCard = ({ thumbnail, video, description }) => {
 export default function Work() {
   return (
     <div className="container  mx-auto py-10">
-      <h2 className="text-center text-2xl mb-8">What We Do</h2>
+      <h1 className="text-center text-color  mb-8">What We Do</h1>
       <div className="flex  justify-center ">
-        <div className="flex flex-wrap flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-wrap flex-col md:flex-row justify-center items-center gap-8 lg:gap-12">
           {videos.map((videoData, index) => (
             <VideoCard key={index} {...videoData} />
           ))}
