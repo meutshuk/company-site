@@ -1,33 +1,62 @@
 import React from "react";
 import { Car } from "./Car";
+import RubberDuck from "./RubberDuck";
 
 export default function Main() {
   return (
-    <section className=" container my-16 mx-auto h-screen grid grid-rows-3 grid-cols-none lg:grid-rows-none lg:grid-cols-12 justify-center items-center ">
-      <div className="row-span-2 lg:col-span-7 h-full">
+    // <section className=" container my-16 mx-auto h-screen grid grid-rows-3 grid-cols-none lg:grid-rows-none lg:grid-cols-12 justify-center items-center ">
+
+    <section>
+      <Section1 />
+      <Section2 />
+    </section>
+  );
+}
+
+const Section1 = () => {
+  return (
+    <div class=" m-16  h-[70vh] justify-center items-center grid md:grid-cols-5 grid-rows-[1fr,2fr,1fr] md:grid-rows-none">
+      <div class="md:col-span-3 h-full row-span-2 md:row-span-auto">
         <Car />
       </div>
-      <div className=" row-span-1 lg:col-span-5">
-        <div className="  mx-[15%] ">
+      <div class="md:col-span-2 row-span-2 md:row-span-auto ">
+        <div className=" ">
           <h1 className="text-color">
             Using the latest technologies to create innovative training and
             development solutions
           </h1>
           <p className="mt-5 text-color">
-            Mines Rescue Virtual Reality Technologies has been providing
-            world-class VR training solutions to the Australian mining industry
-            since 2007. The Virtual Reality Technologies team create innovative
-            training solutions for mining and hazardous industries. Our
-            proprietary Virtual Reality software has been developed to create
-            immersive training experiences utilising the latest Virtual Reality
-            hardware. Our software complements traditional classroom training
-            techniques and works to maximise the benefit of valuable
-            face-to-face training services. Users can create effective,
-            relevant, and realistic training scenarios to deliver market-leading
-            immersive training experiences.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quas
+            architecto commodi ex excepturi aspernatur reprehenderit esse at
+            quaerat velit molestias, sint eaque eveniet officia doloremque
+            maxime impedit consectetur delectus.
           </p>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+const Section2 = () => {
+  return (
+    <div class=" m-16  h-[70vh] justify-center items-center grid md:grid-cols-5 grid-rows-[1fr,2fr,1fr] md:grid-rows-none">
+      <div class="md:col-span-2  row-span-2 md:row-span-auto">
+        <div className=" ">
+          <h1 className="text-color">
+            Using the latest technologies to create innovative training and
+            development solutions
+          </h1>
+          <p className="mt-5 text-color">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quas
+            architecto commodi ex excepturi aspernatur reprehenderit esse at
+            quaerat velit molestias, sint eaque eveniet officia doloremque
+            maxime impedit consectetur delectus.
+          </p>
+        </div>
+      </div>
+      <div class="md:col-span-3 row-span-2 h-full md:row-span-auto ">
+        <RubberDuck />
+      </div>
+    </div>
+  );
+};

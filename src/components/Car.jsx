@@ -13,7 +13,7 @@ export function Model(props) {
 
   const { nodes, materials } = useGLTF("./public/models/car.gltf");
   return (
-    <group ref={carRef} scale={viewport.width / 5.7} {...props} dispose={null}>
+    <group ref={carRef} scale={viewport.width / 6.6} {...props} dispose={null}>
       <mesh
         geometry={nodes.Mesh_body011.geometry}
         material={materials["lightBack.015"]}
@@ -104,7 +104,7 @@ export function Car() {
   return (
     <Canvas
       camera={{
-        position: [0, 3, 5],
+        position: [0, 3, -10],
       }}
       style={{ background: "transparent" }}
     >
@@ -112,7 +112,7 @@ export function Car() {
       {/* <OrbitControls /> */}
       <ambientLight intensity={0.5} />
       <pointLight intensity={2} position={[10, 10, 10]} />
-      <Model position={[0, -1, 0]} />
+      <Model position={[0, -2, 0]} />
     </Canvas>
   );
 }
