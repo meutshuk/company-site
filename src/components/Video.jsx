@@ -15,23 +15,40 @@ export default function Video({ isDay }) {
 
   return (
     <section className="video-section ">
+      {/* Day Video */}
       <video
-        ref={videoRef}
-        key={isDay ? "day" : "night"}
-        playsInline
         autoPlay
-        muted
         loop
+        muted
+        playsInline
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          visibility: isDay ? "visible" : "hidden",
+        }}
       >
-        <source
-          src={
-            isDay
-              ? "./videos/background/day.mp4"
-              : "./videos/background/night.mp4"
-          }
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
+        <source src="./videos/background/day.mp4" type="video/mp4" />
+      </video>
+
+      {/* Night Video */}
+      <video
+        autoPlay
+        loop
+        playsInline
+        muted
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          visibility: !isDay ? "visible" : "hidden",
+        }}
+      >
+        <source src="./videos/background/night.mp4" type="video/mp4" />
       </video>
 
       <div
