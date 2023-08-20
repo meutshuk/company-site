@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-export default function Nav({ darkMode, toggleDayNight }) {
+export default function NavBar({ darkMode, toggleDayNight }) {
   const navbarOverlayRef = useRef(null);
   const navLinkRefs = useRef([]);
   const [isOpen, setIsOpen] = useState(false);

@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import Nav from "./components/Nav";
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Video from "./components/Video";
 import Work from "./components/Work";
 import Toggle from "./components/Toggle";
 import Marquee from "react-fast-marquee";
+import Header from "./components/Navbar/Header";
 
 function App() {
   const [isDay, setIsDay] = useState(true); // default to day mode
@@ -46,7 +47,10 @@ function App() {
       <Video darkMode={darkMode} />
 
       {/* Navbar with overlay when clicked open */}
-      <Nav darkMode={darkMode} toggleDayNight={toggleDayNight} />
+      {/* <Navbar darkMode={darkMode} toggleDayNight={toggleDayNight} /> */}
+
+      {/* New Navbar bubble effect */}
+      <Header />
 
       {/* Toggle Button */}
       <Toggle darkMode={darkMode} toggleDayNight={toggleDayNight} />
