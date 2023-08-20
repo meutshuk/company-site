@@ -80,7 +80,9 @@ function App() {
           <div className="mx-10 text-4xl font-extrabold text-header ">
             rhino.
           </div>
-          <div className="mx-10 text-4xl font-extrabold text-color">ciggy.</div>
+          <div className="mx-10 text-4xl font-extrabold text-color">
+            VR headset.
+          </div>
           <img src={reactLogo} />
           <div className="mx-10 text-4xl font-extrabold text-header">
             apple.
