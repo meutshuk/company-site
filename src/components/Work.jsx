@@ -46,7 +46,7 @@ const VideoCard = ({ thumbnail, video, description }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className="bg-gray-900 h-full object-fill broder-white border-2 overflow-hidden relative rounded-3xl">
+        <div className="bg-gray-900 h-full object-fill border-ascent border-2 overflow-hidden relative rounded-3xl">
           <video
             className="object-cover w-full h-full"
             ref={videoRef}

@@ -33,9 +33,9 @@ export const Navbar = () => {
         <div className="nav__content">
           <ul className="nav__list menu  ">
             <div>
-              <a class="menu__item-link">Home</a>
-              <div class="marquee">
-                <div class="marquee__inner" aria-hidden="true">
+              <a className="menu__item-link">Home</a>
+              <div className="marquee">
+                <div className="marquee__inner" aria-hidden="true">
                   <span>Home</span>
                   <span>Home</span>
                   <span>Home</span>
@@ -44,10 +44,10 @@ export const Navbar = () => {
               </div>
             </div>
 
-            <div class="menu__item nav__list-item">
-              <a class="menu__item-link">Contact </a>
-              <div class="marquee">
-                <div class="marquee__inner" aria-hidden="true">
+            <div className="menu__item nav__list-item">
+              <a className="menu__item-link">Contact </a>
+              <div className="marquee">
+                <div className="marquee__inner" aria-hidden="true">
                   <span>Contact </span>
                   <span>Contact </span>
                   <span>Contact </span>
@@ -55,10 +55,10 @@ export const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div class="menu__item nav__list-item">
-              <a class="menu__item-link">About Us</a>
-              <div class="marquee">
-                <div class="marquee__inner" aria-hidden="true">
+            <div className="menu__item nav__list-item">
+              <a className="menu__item-link">About Us</a>
+              <div className="marquee">
+                <div className="marquee__inner" aria-hidden="true">
                   <span>About Us</span>
                   <span>About Us</span>
                   <span>About Us</span>

@@ -1,9 +1,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PropTypes from "prop-types";
+
+Video.propTypes = {
+  darkMode: PropTypes.bool,
+};
 
 export default function Video({ darkMode }) {
-  console.log(darkMode);
   const officeRef = useRef(null);
   const videoRef = useRef(null);
 
@@ -52,7 +56,12 @@ export default function Video({ darkMode }) {
         <source src="./videos/background/night.mp4" type="video/mp4" />
       </video>
 
-      <div className={"logo-text-overlay logo bg-color"} ref={officeRef}>
+      <div
+        className={
+          "logo-text-overlay text-3xl md:text-4xl lg:text-6xl xl:text-7xl logo bg-color"
+        }
+        ref={officeRef}
+      >
         MINES REACUE VR
       </div>
     </section>

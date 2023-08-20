@@ -1,29 +1,17 @@
 import { useEffect, useState } from "react";
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-// import { Navbar } from "./Navbar/Navbar";
-import { Marquee } from "./components/Marquee";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Video from "./components/Video";
 import Work from "./components/Work";
 import Toggle from "./components/Toggle";
+import Marquee from "react-fast-marquee";
 
 function App() {
   const [isDay, setIsDay] = useState(true); // default to day mode
-
-  // const [isDarkMode, setIsDarkMode] = useState(
-  //   () =>
-  //     localStorage.getItem("dark-mode") === "true" ||
-  //     (!localStorage.getItem("dark-mode") &&
-  //       window.matchMedia("(prefers-color-scheme: dark)").matches)
-  // );
-
-  // useEffect(() => {
-  //   localStorage.setItem("dark-mode", isDarkMode);
-  //   document.body.classList.toggle("dark-mode", isDarkMode);
-  // }, [isDarkMode]);
 
   // // Toggle between day and night
   const toggleDayNight = () => {
@@ -67,7 +55,34 @@ function App() {
       <Main />
 
       {/* Marquess with texts */}
-      <Marquee />
+      <section className=" ">
+        <Marquee
+          className="my-20 w-screen py-10 bg-ascent "
+          gradient={true}
+          gradientWidth={500}
+          gradientColor={[25, 205, 0]}
+          autoFill
+        >
+          <div className="mx-10 text-4xl font-extrabold text-header ">
+            Utshuk.
+          </div>
+          <div className="mx-10 text-4xl font-extrabold text-color ">
+            Gong council.
+          </div>
+          <img src={viteLogo} />
+          <div className="mx-10 text-4xl font-extrabold text-header ">
+            rhino.
+          </div>
+          <div className="mx-10 text-4xl font-extrabold text-color">ciggy.</div>
+          <img src={reactLogo} />
+          <div className="mx-10 text-4xl font-extrabold text-header">
+            apple.
+          </div>
+          <div className="mx-10 text-4xl font-extrabold text-color">
+            singleton.
+          </div>
+        </Marquee>
+      </section>
 
       {/* Animations */}
       <Work />

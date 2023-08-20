@@ -1,6 +1,7 @@
 import React from "react";
 import { Car } from "./Car";
 import RubberDuck from "./RubberDuck";
+import VRHeadset from "./VRHeadset";
 
 export default function Main() {
   return (
@@ -8,6 +9,9 @@ export default function Main() {
 
     <section>
       <Section1 />
+      <div className=" h-[30vh] w-full md:hidden">
+        <VRHeadset />
+      </div>
       <Section2 />
     </section>
   );
@@ -15,11 +19,11 @@ export default function Main() {
 
 const Section1 = () => {
   return (
-    <div class=" m-16  h-[70vh] justify-center items-center grid md:grid-cols-5 grid-rows-[1fr,2fr,1fr] md:grid-rows-none">
-      <div class="md:col-span-3 h-full row-span-2 md:row-span-auto">
+    <div className=" mx-16 my-4   md:justify-center md:items-center md:h-[60vh] md:grid  md:grid-cols-5  md:grid-rows-none">
+      <div className="md:col-span-3 h-full row-span-2 hidden md:block md:row-span-auto ">
         <Car />
       </div>
-      <div class="md:col-span-2 row-span-2 md:row-span-auto ">
+      <div className="md:col-span-2 row-span-2 md:row-span-auto ">
         <div className=" ">
           <h1 className="text-color">
             Using the latest technologies to create innovative training and
@@ -39,8 +43,8 @@ const Section1 = () => {
 
 const Section2 = () => {
   return (
-    <div class=" m-16  h-[70vh] justify-center items-center grid md:grid-cols-5 grid-rows-[1fr,2fr,1fr] md:grid-rows-none">
-      <div class="md:col-span-2  row-span-2 md:row-span-auto">
+    <div className=" mx-16 my-4  md:justify-center md:items-center md:h-[60vh] md:grid  md:grid-cols-5  md:grid-rows-none">
+      <div className="md:col-span-2  row-span-2 md:row-span-auto">
         <div className=" ">
           <h1 className="text-color">
             Using the latest technologies to create innovative training and
@@ -54,7 +58,7 @@ const Section2 = () => {
           </p>
         </div>
       </div>
-      <div class="md:col-span-3 row-span-2 h-full md:row-span-auto ">
+      <div className="md:col-span-3 h-full row-span-2 hidden md:block md:row-span-auto ">
         <RubberDuck />
       </div>
     </div>

@@ -40,13 +40,13 @@ export default function Footer() {
             <h4 className="text-xl font-bold mb-4 text-color">Follow Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-red hover:text-blue-400">
-                <FaFacebookF className="text-lg " />
+                <FaFacebookF className="text-2xl " />
               </a>
               <a href="#" className="text-red hover:text-blue-400">
-                <FaTwitter className="text-lg" />
+                <FaTwitter className="text-2xl" />
               </a>
               <a href="#" className="text-red hover:text-blue-400">
-                <FaInstagram className="text-lg" />
+                <FaInstagram className="text-2xl" />
               </a>
             </div>
           </div>

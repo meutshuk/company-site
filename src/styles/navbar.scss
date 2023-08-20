@@ -22,13 +22,13 @@
   text-decoration: none;
   transform: translateY(100%);
   opacity: 0;
-  font-family: "ADLaM Display", cursive;
-  // font-size: 8vw;
-  font-size: clamp(8vw, 50%, 9vw);
+  // font-family: "ADLaM Display", cursive;
+  font-size: 5vw;
+  // font-size: clamp(8vw, 50%, 9vw);
   overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  padding: 0 100vw; /* Space equivalent to screen width on each side */
+  // white-space: nowrap;
+  // position: relative;
+  // padding: 0 100vw; /* Space equivalent to screen width on each side */
   transition: color 0.2s;
 }
 
