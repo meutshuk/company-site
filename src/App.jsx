@@ -48,6 +48,9 @@ function App() {
 
       {/* Navbar with overlay when clicked open */}
       {/* <Navbar darkMode={darkMode} toggleDayNight={toggleDayNight} /> */}
+      {/* 
+      https://blog.olivierlarose.com/demos/text-clip-mask-on-scroll
+      */}
 
       {/* New Navbar bubble effect */}
       <Header />
